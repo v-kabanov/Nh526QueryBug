@@ -158,11 +158,11 @@ namespace Nh526QueryBug
 
             Assert.IsNotNull(parent);
 
-            Assert.IsTrue(NHibernateUtil.IsInitialized(parent.Children)); // passes
+            Assert.IsTrue(NHibernateUtil.IsInitialized(parent.Children));
 
             foreach (var child in parent.Children)
             {
-                Assert.IsTrue(NHibernateUtil.IsInitialized(child.GrandChildren)); // fails
+                Assert.IsTrue(NHibernateUtil.IsInitialized(child.GrandChildren));
             }
         }
 
